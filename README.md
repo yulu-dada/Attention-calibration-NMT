@@ -10,9 +10,11 @@ Python-3.6
 ```
 ### Train
 We implement the described models with [fairseq toolkit](https://github.com/pytorch/fairseq) for training and evaluating. 
-The bilingual datasets should be first preprocessed into binary format and save in 'data-bin-chen' file. More details can refer to the tutorial of Fairseq. 
+The bilingual datasets should be first preprocessed into binary format and save in 'data-bin-chen' file. More details can refer to the tutorial of Fairseq.
+
+'mycode-fix', 'mycode-anneal' and 'mycode-gate' are corresponding to our proposed three calibration methods 'Fixed Weighed Sum', 'Annealing Learning' and 'Gating Mechanism' as mentioned in section 3.2.
 ```
-user_dir=./mycode-g/
+user_dir=./mycode-gate/
 data_bin=./data-bin-chen/
 model_dir=./models/chen-gate-0.03
 export CUDA_VISIBLE_DEVICES=0,1
